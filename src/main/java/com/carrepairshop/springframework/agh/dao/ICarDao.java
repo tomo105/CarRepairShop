@@ -1,0 +1,18 @@
+package com.carrepairshop.springframework.agh.dao;
+
+import com.carrepairshop.springframework.agh.car.Car;
+
+import java.util.Collection;
+import java.util.Optional;
+
+public interface ICarDao {
+    Collection<Car> getAllCars();
+
+    Optional<Car> getCarById(int id);
+
+    void deleteCarById(int id);
+
+    void updateCarById(Car car);
+
+    void insertCarToDb(Car car);
+}
