@@ -70,7 +70,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
          * Set security true/false for disable/enable security authentication
          * Mention that disabling security should be used only with dev/test purposes!
          **/
-        boolean security = false;
+        boolean security = true;
         if (!security)
             http.authorizeRequests().antMatchers("/").permitAll();
         else {
