@@ -1,7 +1,7 @@
 package com.carrepairshop.springframework.agh.services;
 
 import com.carrepairshop.springframework.agh.car.Car;
-import com.carrepairshop.springframework.agh.dao.ICarDao;
+import com.carrepairshop.springframework.agh.dao.CarDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
@@ -13,7 +13,7 @@ import java.util.Optional;
 public class CarService {
     @Autowired
     @Qualifier("mysqlCar")
-    private ICarDao carDao;
+    private CarDao carDao;
 
     public Collection<Car> getAllCars() {
         return this.carDao.getAllCars();

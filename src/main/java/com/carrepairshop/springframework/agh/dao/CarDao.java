@@ -5,7 +5,7 @@ import com.carrepairshop.springframework.agh.car.Car;
 import java.util.Collection;
 import java.util.Optional;
 
-public interface ICarDao {
+public interface CarDao {
     Collection<Car> getAllCars();
 
     Optional<Car> getCarById(int id);
