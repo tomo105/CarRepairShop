@@ -74,10 +74,14 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         /**
          * Set security true/false for disable/enable security authentication
          * Mention that disabling security should be used only with dev/test purposes!
+         * security = false easiest test with postman, disable security auth
          **/
         boolean security = true;
         if (!security)
-            http.authorizeRequests().antMatchers("/").permitAll();
+            http
+                    .formLogin().and()
+                    .csrf().disable()
+                    .authorizeRequests().antMatchers("/").permitAll();
         else {
             http
                     .formLogin().and()

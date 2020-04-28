@@ -14,7 +14,7 @@ import java.util.Collection;
 import java.util.Optional;
 
 @Repository("mysqlCar")
-public class MySqlCarImpl implements ICarDao {
+public class MySqlCarImpl implements CarDao {
     private final Logger LOGGER = LoggerFactory.getLogger(MySqlCarImpl.class);
 
     @Autowired
