@@ -11,19 +11,22 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+// The Access Denied occurs when an authenticated user tries to access resources
+// that he doesn't have enough authorities to access.
+
 public class CustomAccessDeniedHandler implements AccessDeniedHandler {
 
     public static final Logger LOG = Logger.getLogger(CustomAccessDeniedHandler.class);
 
     @Override
     public void handle(HttpServletRequest request, HttpServletResponse response,
-            AccessDeniedException exc) throws IOException, ServletException {
+                       AccessDeniedException exc) throws IOException, ServletException {
 
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         if (auth != null) {
             LOG.warn("User: " + auth.getName() + " attempted to access the protected URL: "
                     + request.getRequestURI());
         }
-        response.sendRedirect(request.getContextPath() + "/accessDenied");
+        response.sendRedirect("/accessDenied");
     }
 }
