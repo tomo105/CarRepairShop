@@ -1,7 +1,7 @@
 package com.carrepairshop.springframework.agh.controllers;
 
-import com.carrepairshop.springframework.agh.history.History;
-import com.carrepairshop.springframework.agh.services.HistoryService;
+import com.carrepairshop.springframework.agh.domain.History;
+import com.carrepairshop.springframework.agh.service.HistoryService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

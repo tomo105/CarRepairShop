@@ -1,4 +1,4 @@
-package com.carrepairshop.springframework.agh.employees;
+package com.carrepairshop.springframework.agh.domain.employees;
 
 import lombok.*;
 

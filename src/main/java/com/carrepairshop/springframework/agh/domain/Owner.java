@@ -1,4 +1,4 @@
-package com.carrepairshop.springframework.agh.carOwner;
+package com.carrepairshop.springframework.agh.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

@@ -1,6 +1,7 @@
-package com.carrepairshop.springframework.agh.dao;
+package com.carrepairshop.springframework.agh.dao.impl;
 
-import com.carrepairshop.springframework.agh.employees.AbstractEmployee;
+import com.carrepairshop.springframework.agh.dao.EmployeeDao;
+import com.carrepairshop.springframework.agh.domain.employees.AbstractEmployee;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

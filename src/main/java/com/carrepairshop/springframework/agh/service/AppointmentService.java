@@ -1,6 +1,6 @@
-package com.carrepairshop.springframework.agh.services;
+package com.carrepairshop.springframework.agh.service;
 
-import com.carrepairshop.springframework.agh.car.Appointment;
+import com.carrepairshop.springframework.agh.domain.Appointment;
 import com.carrepairshop.springframework.agh.dao.AppointmentDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;

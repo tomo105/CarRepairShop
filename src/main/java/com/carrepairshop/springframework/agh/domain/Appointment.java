@@ -1,23 +1,24 @@
-package com.carrepairshop.springframework.agh.history;
+package com.carrepairshop.springframework.agh.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.NonNull;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import java.util.Date;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class History {
+public class Appointment {
     @Id
     @GeneratedValue
     private Integer id;
-
-    private String date;
-    private String time;
+    @NonNull
+    private String nameUser;
+    private String numberCar;
+    private Date data;
     private String description;
-    private String type;
-
 }

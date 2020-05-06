@@ -1,7 +1,7 @@
 package com.carrepairshop.springframework.agh.controllers;
 
-import com.carrepairshop.springframework.agh.car.Appointment;
-import com.carrepairshop.springframework.agh.services.AppointmentService;
+import com.carrepairshop.springframework.agh.domain.Appointment;
+import com.carrepairshop.springframework.agh.service.AppointmentService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

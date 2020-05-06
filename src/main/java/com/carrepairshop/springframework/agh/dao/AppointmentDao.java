@@ -1,6 +1,6 @@
 package com.carrepairshop.springframework.agh.dao;
 
-import com.carrepairshop.springframework.agh.car.Appointment;
+import com.carrepairshop.springframework.agh.domain.Appointment;
 
 import java.util.Collection;
 import java.util.Optional;
