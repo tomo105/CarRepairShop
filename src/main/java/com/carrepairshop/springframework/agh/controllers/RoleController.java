@@ -1,7 +1,7 @@
 package com.carrepairshop.springframework.agh.controllers;
 
-import com.carrepairshop.springframework.agh.domain.Role;
-import com.carrepairshop.springframework.agh.service.RoleService;
+import com.carrepairshop.springframework.agh.employees.Role;
+import com.carrepairshop.springframework.agh.services.RoleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

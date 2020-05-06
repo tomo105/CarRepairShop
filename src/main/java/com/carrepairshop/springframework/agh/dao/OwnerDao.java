@@ -1,6 +1,6 @@
 package com.carrepairshop.springframework.agh.dao;
 
-import com.carrepairshop.springframework.agh.domain.Owner;
+import com.carrepairshop.springframework.agh.carOwner.Owner;
 
 import java.util.Collection;
 

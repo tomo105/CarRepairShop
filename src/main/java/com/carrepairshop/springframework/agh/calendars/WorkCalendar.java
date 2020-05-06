@@ -1,4 +1,4 @@
-package com.carrepairshop.springframework.agh.domain.calendars;
+package com.carrepairshop.springframework.agh.calendars;
 
 import lombok.Data;
 

@@ -1,4 +1,4 @@
-package com.carrepairshop.springframework.agh.domain;
+package com.carrepairshop.springframework.agh.employees;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

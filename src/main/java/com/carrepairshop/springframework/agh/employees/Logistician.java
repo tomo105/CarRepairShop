@@ -1,6 +1,6 @@
-package com.carrepairshop.springframework.agh.domain.employees;
+package com.carrepairshop.springframework.agh.employees;
 
-import com.carrepairshop.springframework.agh.domain.calendars.WorkCalendar;
+import com.carrepairshop.springframework.agh.calendars.WorkCalendar;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;

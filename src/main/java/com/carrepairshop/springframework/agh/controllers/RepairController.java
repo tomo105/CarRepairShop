@@ -1,7 +1,7 @@
 package com.carrepairshop.springframework.agh.controllers;
 
-import com.carrepairshop.springframework.agh.domain.Repair;
-import com.carrepairshop.springframework.agh.service.RepairService;
+import com.carrepairshop.springframework.agh.car.Repair;
+import com.carrepairshop.springframework.agh.services.RepairService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,6 +1,6 @@
 package com.carrepairshop.springframework.agh.dao;
 
-import com.carrepairshop.springframework.agh.domain.employees.AbstractEmployee;
+import com.carrepairshop.springframework.agh.employees.AbstractEmployee;
 
 import java.util.Collection;
 import java.util.Optional;

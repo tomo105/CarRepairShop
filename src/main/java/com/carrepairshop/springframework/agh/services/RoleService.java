@@ -1,7 +1,7 @@
-package com.carrepairshop.springframework.agh.service;
+package com.carrepairshop.springframework.agh.services;
 
 import com.carrepairshop.springframework.agh.dao.RoleDao;
-import com.carrepairshop.springframework.agh.domain.Role;
+import com.carrepairshop.springframework.agh.employees.Role;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;

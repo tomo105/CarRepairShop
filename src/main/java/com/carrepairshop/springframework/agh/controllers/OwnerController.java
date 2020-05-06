@@ -1,7 +1,7 @@
 package com.carrepairshop.springframework.agh.controllers;
 
-import com.carrepairshop.springframework.agh.domain.Owner;
-import com.carrepairshop.springframework.agh.service.OwnerService;
+import com.carrepairshop.springframework.agh.carOwner.Owner;
+import com.carrepairshop.springframework.agh.services.OwnerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
