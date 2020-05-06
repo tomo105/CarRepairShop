@@ -1,6 +1,7 @@
-package com.carrepairshop.springframework.agh.dao;
+package com.carrepairshop.springframework.agh.dao.impl;
 
-import com.carrepairshop.springframework.agh.carOwner.Owner;
+import com.carrepairshop.springframework.agh.dao.OwnerDao;
+import com.carrepairshop.springframework.agh.domain.Owner;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;

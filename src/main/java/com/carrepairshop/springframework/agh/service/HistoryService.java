@@ -1,7 +1,7 @@
-package com.carrepairshop.springframework.agh.services;
+package com.carrepairshop.springframework.agh.service;
 
 import com.carrepairshop.springframework.agh.dao.HistoryDao;
-import com.carrepairshop.springframework.agh.history.History;
+import com.carrepairshop.springframework.agh.domain.History;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;

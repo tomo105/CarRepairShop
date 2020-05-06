@@ -1,6 +1,6 @@
 package com.carrepairshop.springframework.agh.security.config;
 
-import com.carrepairshop.springframework.agh.employees.AbstractEmployee;
+import com.carrepairshop.springframework.agh.domain.employees.AbstractEmployee;
 import com.carrepairshop.springframework.agh.handler.CustomAccessDeniedHandler;
 import com.carrepairshop.springframework.agh.handler.UrlAuthenticationSuccessHandler;
 import org.apache.logging.log4j.LogManager;
