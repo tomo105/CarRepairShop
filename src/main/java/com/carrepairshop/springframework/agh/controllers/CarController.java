@@ -36,6 +36,31 @@ public class CarController {
                 .orElse(new ResponseEntity<>(HttpStatus.NOT_FOUND));
     }
 
+    @GetMapping(value = "/car/byOwnerSurname/{surname}")
+    public Collection<Car> getCarByOwnerSurname(@PathVariable("surname") String surname) {
+        return carService.getCarByOwnerSurname(surname);
+    }
+
+    @GetMapping(value = "/car/byOwnerPhoneNumber/{phoneNumber}")
+    public Collection<Car> getCarByOwnerPhoneNumber(@PathVariable("phoneNumber") String phoneNumber) {
+        return carService.getCarByOwnerPhoneNumber(phoneNumber);
+    }
+
+    @GetMapping(value = "/car/byRegistrationNumber/{registrationNumber}")
+    public Car getCarByRegistrationNumber(@PathVariable("registrationNumber") String registrationNumber) {
+        return carService.getCarByRegistrationNumber(registrationNumber);
+    }
+
+    @GetMapping(value = "/car/byBrand/{brand}")
+    public Collection<Car> getCarByBrand(@PathVariable("brand") String brand) {
+        return carService.getCarByBrand(brand);
+    }
+
+    @GetMapping(value = "/car/byModel/{model}")
+    public Collection<Car> getCarByOwnerByModel(@PathVariable("model") String model) {
+        return carService.getCarByModel(model);
+    }
+
     @DeleteMapping(value = "/car/{id}")
     ResponseEntity<?> deleteCarById(@PathVariable("id") int id) {
         LOGGER.info("Request to delete car: {}", id);
