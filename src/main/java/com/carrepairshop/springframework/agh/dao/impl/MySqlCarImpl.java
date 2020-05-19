@@ -50,6 +50,40 @@ public class MySqlCarImpl implements CarDao {
         return Optional.of(car);
     }
 
+
+    @Override
+    public Collection<Car> getCarByOwnerSurname(String client) {
+        // SELECT column_name(s) FROM table_name where column = value
+        final String sql = getCar + " WHERE client = ?";
+        return jdbcTemplate.query(sql, new CarRowMapper(), client);
+    }
+
+    @Override
+    public Collection<Car> getCarByOwnerPhoneNumber(String phoneNumber) {
+        // SELECT column_name(s) FROM table_name where column = value
+        final String sql = getCar + " WHERE phoneNumber = ?";
+        return jdbcTemplate.query(sql, new CarRowMapper(), phoneNumber);
+    }
+
+    @Override
+    public Car getCarByRegistrationNumber(String registrationNumber) {
+        // SELECT column_name(s) FROM table_name where column = value
+        final String sql = getCar + " WHERE CAR.registrationNumber = ?";
+        return jdbcTemplate.queryForObject(sql, new CarRowMapper(), registrationNumber);
+    }
+
+    public Collection<Car> getCarByBrand(String brand) {
+        // SELECT column_name(s) FROM table_name where column = value
+        final String sql = getCar + " WHERE brand = ?";
+        return jdbcTemplate.query(sql, new CarRowMapper(), brand);
+    }
+
+    public Collection<Car> getCarByModel(String model) {
+        // SELECT column_name(s) FROM table_name where column = value
+        final String sql = getCar + " WHERE model = ?";
+        return jdbcTemplate.query(sql, new CarRowMapper(), model);
+    }
+
     @Override
     public void deleteCarById(int id) {
         final String sql = "DELETE FROM CAR WHERE id = ?";

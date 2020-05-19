@@ -10,6 +10,15 @@ public interface CarDao {
 
     Optional<Car> getCarById(int id);
 
+    Collection<Car> getCarByOwnerSurname( String surname );
+
+    Collection<Car> getCarByOwnerPhoneNumber( String phoneNumber );
+
+    Car getCarByRegistrationNumber( String registrationNumber );
+
+    Collection<Car> getCarByBrand( String brand );
+
+    Collection<Car> getCarByModel( String model );
     void deleteCarById(int id);
 
     void updateCarById(Car car);
