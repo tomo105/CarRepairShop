@@ -77,7 +77,7 @@ public class MySqlAppointmentImpl implements AppointmentDao {
 
     @Override
     public void updateAppointmentById(Appointment appointment) {
-        final String sql = "UPDATE APPOINTMENT SET nameUser=?,numberCar=?,data=? description=? WHERE id = ?";
+        final String sql = "UPDATE APPOINTMENT SET nameUser=?,numberCar=?,data=?, description=? WHERE id = ?";
         final String nameUser = appointment.getNameUser();
         final String numberCar = appointment.getNumberCar();
         final int id = appointment.getId();
