@@ -88,20 +88,20 @@ public class MySqlRepairImpl implements RepairDao {
         final Date data = repair.getData();
         final double sparesCosts = repair.getSparesCosts();
         final double serviceCosts = repair.getServiceCosts();
+        final String note = repair.getNote();
         LOGGER.info("Repair parameters in updateRepair nameUser: {}", nameUser);
-        jdbcTemplate.update(sql, new Object[]{nameUser, numberCar, data, sparesCosts, serviceCosts, id});
+        jdbcTemplate.update(sql, new Object[]{nameUser, numberCar, data, sparesCosts, serviceCosts, note, id});
     }
 
     @Override
     public void insertRepairToDb(Repair repair) {
-        final String sql = "INSERT INTO REPAIR (nameUser,numberCar,data,sparesCosts,serviceCosts) VALUES (?,?,?,?,?)";
+        final String sql = "INSERT INTO REPAIR (nameUser,numberCar,data,sparesCosts,serviceCosts,note) VALUES (?,?,?,?,?,?)";
         final String nameUser = repair.getNameUser();
         final String numberCar = repair.getNumberCar();
         final Date data = repair.getData();
         final double sparesCosts = repair.getSparesCosts();
         final double serviceCosts = repair.getServiceCosts();
-        jdbcTemplate.update(sql, new Object[]{nameUser, numberCar, data, sparesCosts, serviceCosts});
-
+        final String note = repair.getNote();
+        jdbcTemplate.update(sql, new Object[]{nameUser, numberCar, data, sparesCosts, serviceCosts, note});
     }
-
 }
