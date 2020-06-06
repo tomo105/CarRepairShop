@@ -11,11 +11,7 @@ import org.springframework.stereotype.Repository;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
 @Repository("Employee")
 public class EmployeeImpl implements EmployeeDao {
@@ -49,7 +45,7 @@ public class EmployeeImpl implements EmployeeDao {
 
     @Override
     public Optional<AbstractEmployee> getEmployeeById(int id) {
-        final String sql = "SELECT USERS.id, setRole, name, surname, experience, experienceInCompany " +
+        final String sql = "SELECT USERS.id, setRole, name, surname, experience, experienceInCompany, login, password " +
                 "FROM USERS JOIN ROLE ON USERS.setRole=ROLE.role " +
                 "WHERE USERS.id = ?";
         LOGGER.info("Getting employee with id: " + id);
@@ -84,12 +80,17 @@ public class EmployeeImpl implements EmployeeDao {
 
     @Override
     public void updateEmployeeById(AbstractEmployee abstractEmployee) {
-        final String sql = "UPDATE USERS SET setRole= ?, name = ?,surname= ?, " +
-                "login = ?, password = ?, experience = ?, experienceInCompany = ? WHERE id = ?";
+        String sql = "UPDATE USERS SET setRole= ?, name = ?, surname= ? ";
+        if (abstractEmployee.getLogin() != null && !abstractEmployee.getLogin().isEmpty())
+            sql += ", login = ? ";
+        if (abstractEmployee.getPassword() != null && !abstractEmployee.getPassword().isEmpty())
+            sql += ", password = ? ";
+        sql += ", experience = ?, experienceInCompany = ? WHERE id = ?";
 
         List<Object> values = new ArrayList<>(getEmployeeValues(abstractEmployee));
         final int id = abstractEmployee.getId();
         LOGGER.info("id: " + values);
+        values.removeAll(Collections.singleton(null));
         values.add(id);
         LOGGER.info("Updating employee: " + abstractEmployee);
         jdbcTemplate.update(sql, values.toArray());

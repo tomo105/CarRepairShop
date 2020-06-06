@@ -64,10 +64,13 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         List<AbstractEmployee> abstractEmployees = new ArrayList<>
                 (jdbcTemplate.query(sql, new UsersRowMapper()));
 
-        for (AbstractEmployee a : abstractEmployees) {
-            String login = a.getLogin();
-            String password = a.getPassword();
-            String role = a.getSetRole().toUpperCase();
+        for (AbstractEmployee employee : abstractEmployees) {
+            if (employee.getLogin() == null || employee.getPassword() == null || employee.getSetRole() == null)
+                continue;
+
+            String login = employee.getLogin();
+            String password = employee.getPassword();
+            String role = employee.getSetRole().toUpperCase();
 
             auth.inMemoryAuthentication().passwordEncoder(passwordEncoder)
                     .withUser(login).password(passwordEncoder.encode(password)).roles(role);
